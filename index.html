@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MATHX</title>
+    <link rel="icon" href="./images/icon.png" type="image/png">
+    <meta property="og:title" content="MATHX" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {  line-height: 1.15;}body {  margin: 0;}* {  box-sizing: border-box;  border-width: 0;  border-style: solid;}p,li,ul,pre,div,h1,h2,h3,h4,h5,h6,figure,blockquote,figcaption {  margin: 0;  padding: 0;}button {  background-color: transparent;}button,input,optgroup,select,textarea {  font-family: inherit;  font-size: 100%;  line-height: 1.15;  margin: 0;}button,select {  text-transform: none;}button,[type="button"],[type="reset"],[type="submit"] {  -webkit-appearance: button;}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner {  border-style: none;  padding: 0;}button:-moz-focus,[type="button"]:-moz-focus,[type="reset"]:-moz-focus,[type="submit"]:-moz-focus {  outline: 1px dotted ButtonText;}a {  color: inherit;  text-decoration: inherit;}input {  padding: 2px 4px;}img {  display: block;}html { scroll-behavior: smooth  }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        font-weight: 400;
+        font-style:normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-gray-black);
+        background-color: var(--dl-color-gray-white);
+
+      }
+    </style>
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+      data-tag="font"
+    /> -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css"
+    /> -->
+    <style>
+      @keyframes fade-in-left {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <link rel="stylesheet" id="light-mode-stylesheet" href="./light-mode.css" />
+    <link rel="stylesheet" id="dark-mode-stylesheet" href="./dark-mode.css" disabled/>
+
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="home-container">
+        <div class="home-header">
+          <header
+            data-thq="thq-navbar"
+            class="navbarContainer home-navbar-interactive"
+          >
+            <a href="index.html"><span class="logo">MATHX</span></a>
+            <div data-thq="thq-navbar-nav" class="home-desktop-menu">
+              <nav class="home-links">
+                <a href="physics.html"><button id="physics" class="buttonFlat">Physics</button></a>
+                <a href="engineering.html"><button id="engineering" class="buttonFlat">Engineering</button></a>
+                <a href="biology.html"><button id="biology" class="home-nav32 buttonFlat">Biology</button></a>
+                <a href="chemistry.html"><button id="chemistry" class="home-nav42 buttonFlat">Chemistry</button></a>
+                <a href="computerscience.html"><button id="computerScience" class="home-nav52 buttonFlat">Computer Science</button></a>
+              </nav>
+              <div class="home-buttons">
+                <button id="dark-mode-toggle" class="buttonFilled">Toggle Dark Mode</button>
+                <button class="home-login buttonFlat">Login</button>
+                <button class="buttonFilled">Register</button>
+              </div>
+            </div>
+            <div data-thq="thq-burger-menu" class="home-burger-menu">
+              <svg viewBox="0 0 1024 1024" class="home-icon socialIcons">
+                <path
+                  d="M128 554.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 298.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667zM128 810.667h768c23.552 0 42.667-19.115 42.667-42.667s-19.115-42.667-42.667-42.667h-768c-23.552 0-42.667 19.115-42.667 42.667s19.115 42.667 42.667 42.667z"
+                ></path>
+              </svg>
+            </div>
+            <div
+              data-thq="thq-mobile-menu"
+              class="home-mobile-menu1 mobileMenu"
+            >
+              <div class="home-nav">
+                <div class="home-top">
+                  <span class="logo">MATHX</span>
+                  <div data-thq="thq-close-menu" class="home-close-menu">
+                    <svg
+                      viewBox="0 0 1024 1024"
+                      class="home-icon02 socialIcons"
+                    >
+                      <path
+                        d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+                <nav class="home-links1">
+                  <span class="home-nav121 bodySmall">Physics</span>
+                  <span class="home-nav221 bodySmall">Engineering</span>
+                  <span class="home-nav321 bodySmall">Biology</span>
+                  <span class="home-nav421 bodySmall">Chemistry</span>
+                  <span class="home-nav521 bodySmall">Computer Science</span>
+                </nav>
+                <div class="home-buttons1">
+                  <button class="buttonFlat">Login</button>
+                  <button class="buttonFilled">Register</button>
+                </div>
+              </div>
+              <div>
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="home-icon04 socialIcons"
+                >
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="home-icon06 socialIcons"
+                >
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 602.2582857142856 1024"
+                  class="home-icon08 socialIcons"
+                >
+                  <path
+                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </header>
+        </div>
+        <div class="home-hero">
+          <div class="heroContainer home-hero1">
+            <div class="home-container01">
+              <h1 class="home-hero-heading heading1">
+                Exploring the Applications of Mathematics
+              </h1>
+              <span class="home-hero-sub-heading bodyLarge">
+                    Unleashing the Power of Numbers
+              </span>
+              <div class="home-btn-group">
+                <button class="buttonFlat">Learn More&nbsp;→</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-features">
+          <div class="featuresContainer">
+            <div class="home-features1">
+              <div class="home-container02">
+                <span class="overline">
+                  <span>features</span>
+                  <br />
+                </span>
+                <h2 class="home-features-heading heading2">
+                  Applications of Mathematics
+                </h2>
+                <span class="home-features-sub-heading bodyLarge">
+                        Discover the diverse fields where mathematics plays a
+                        crucial role
+                </span>
+              </div>
+              <div class="home-container03">
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path
+                      d="M534.101,337.23c-7.888-10.304-16.733-20.673-26.417-31.019c9.685-10.345,18.529-20.714,26.417-31.019
+                      c18.542-24.221,31.031-47.054,37.122-67.866c4.9-16.74,7.995-41.128-5.084-62.243c-17.681-28.546-53.763-34.538-80.918-34.538
+                      c-22.832,0-48.908,4.001-76.949,11.542c-2.767-9.134-5.748-17.92-8.945-26.293c-10.877-28.487-23.747-51.157-38.253-67.276
+                      C344.346,9.932,325.123,0,305.483,0h-0.126c-24.837,0-43.908,15.665-55.532,28.67c-14.452,16.167-27.239,38.936-38.007,67.475
+                      c-3.102,8.221-5.992,16.838-8.677,25.787c-27.819-7.438-53.689-11.383-76.362-11.383c-27.156,0-63.238,5.995-80.918,34.541
+                      c-13.078,21.115-9.984,45.51-5.084,62.25c6.091,20.812,18.581,43.66,37.122,67.88c7.884,10.298,16.723,20.664,26.402,31.005
+                      c-9.679,10.339-18.518,20.703-26.402,31.001c-18.541,24.221-31.031,47.054-37.122,67.866c-4.899,16.74-7.995,41.128,5.084,62.243
+                      c17.681,28.546,53.763,34.538,80.918,34.538c22.841,0,48.926-4.005,76.98-11.55c2.759,9.096,5.729,17.847,8.915,26.191
+                      c10.876,28.486,23.747,51.05,38.252,67.169C267.652,602.272,286.874,612,306.513,612h0.13c24.838,0,43.908-15.468,55.533-28.472
+                      c14.452-16.167,27.239-38.739,38.006-67.278c3.087-8.184,5.965-16.76,8.641-25.667c27.831,7.453,53.715,11.409,76.398,11.409
+                      c0.003,0,0.003,0,0.006,0c27.154,0,63.233-6.052,80.912-34.596c13.078-21.115,9.984-45.56,5.084-62.301
+                      C565.133,384.283,552.643,361.451,534.101,337.23z M485.221,145.319c14.999,0,41.615,2.348,51.357,18.075
+                      c11.01,17.776-0.237,51.668-30.087,90.661c-7.007,9.153-14.857,18.377-23.438,27.598c-16.209-15.153-34.084-30.093-53.288-44.532
+                      c-2.646-28.615-6.9-55.991-12.643-81.374C442.553,148.889,465.693,145.319,485.221,145.319z M384.282,446.482
+                      c-0.293-0.104-0.585-0.204-0.879-0.308c-12.664-4.488-25.604-9.645-38.679-15.399c9.391-5.288,18.78-10.831,28.133-16.624
+                      c6.506-4.029,12.915-8.132,19.223-12.297C389.993,417.319,387.384,432.241,384.282,446.482z M354.546,384.59
+                      c-16.005,9.913-32.282,19.152-48.565,27.593c-16.271-8.447-32.535-17.688-48.528-27.593c-14.5-8.981-28.486-18.32-41.854-27.909
+                      c-1.148-16.409-1.759-33.215-1.794-50.276c-0.036-17.14,0.509-34.03,1.598-50.523c13.427-9.638,27.479-19.024,42.051-28.05
+                      c15.995-9.907,32.262-19.141,48.535-27.578c16.281,8.442,32.555,17.68,48.559,27.592c14.503,8.983,28.49,18.323,41.86,27.914
+                      c1.144,16.389,1.753,33.171,1.789,50.204c0.036,17.162-0.51,34.069-1.602,50.577C383.167,366.18,369.117,375.565,354.546,384.59z
+                      M228.186,446.26c-3.112-14.074-5.745-28.815-7.871-44.085c6.181,4.075,12.459,8.09,18.828,12.035
+                      c9.318,5.772,18.672,11.295,28.028,16.567c-13.04,5.727-25.946,10.865-38.575,15.34
+                      C228.459,446.164,228.323,446.211,228.186,446.26z M179.397,328.843c-9.042-7.469-17.666-15.028-25.836-22.632
+                      c8.144-7.582,16.742-15.117,25.754-22.564c-0.202,7.552-0.3,15.157-0.283,22.805C179.048,313.96,179.171,321.427,179.397,328.843z
+                      M227.686,165.994c0.304,0.107,0.606,0.211,0.91,0.319c12.646,4.481,25.569,9.626,38.626,15.364
+                      c-9.373,5.279-18.744,10.812-28.079,16.594c-6.509,4.032-12.922,8.137-19.234,12.304
+                      C221.99,195.128,224.592,180.221,227.686,165.994z M383.838,166.154c3.114,14.1,5.746,28.868,7.871,44.168
+                      c-6.188-4.08-12.474-8.1-18.851-12.05c-9.339-5.784-18.713-11.319-28.09-16.6c13.061-5.738,25.987-10.884,38.637-15.367
+                      C383.548,166.254,383.692,166.205,383.838,166.154z M432.605,283.601c9.036,7.466,17.656,15.021,25.82,22.621
+                      c-8.141,7.578-16.735,15.11-25.743,22.554c0.204-7.57,0.301-15.193,0.285-22.859C432.952,298.435,432.83,290.993,432.605,283.601z
+                      M244.352,108.433c17.335-45.946,40.167-73.402,61.13-73.446c20.905,0,43.843,27.363,61.359,73.239
+                      c2.93,7.676,5.665,15.739,8.208,24.129c-22.348,7.764-45.552,17.479-69.052,28.944c-23.702-11.564-47.101-21.344-69.626-29.14
+                      C238.844,123.915,241.502,115.986,244.352,108.433z M75.422,163.394c9.741-15.727,36.358-18.075,51.357-18.075
+                      c19.402,0,42.367,3.526,67.605,10.3c-5.685,25.476-9.86,52.962-12.408,81.697c-19.106,14.379-36.893,29.252-53.028,44.337
+                      c-8.581-9.221-16.43-18.445-23.437-27.598C75.659,215.063,64.412,181.171,75.422,163.394z M126.778,467.103
+                      c-14.999,0-41.615-2.348-51.356-18.075c-11.01-17.776,0.237-51.669,30.087-90.662c7.001-9.146,14.845-18.363,23.418-27.577
+                      c16.217,15.167,34.103,30.121,53.32,44.574c2.65,28.594,6.906,55.945,12.652,81.306
+                      C169.459,463.531,146.313,467.103,126.778,467.103z M367.647,503.885c-17.335,45.946-40.167,73.342-61.077,73.342h-0.049
+                      c-20.908,0-43.847-27.292-61.363-73.167c-2.917-7.639-5.639-15.662-8.172-24.006c22.315-7.754,45.482-17.453,68.945-28.897
+                      c23.707,11.576,47.113,21.369,69.645,29.179C373.118,488.516,370.477,496.385,367.647,503.885z M536.578,449.086
+                      c-9.741,15.727-36.353,18.133-51.351,18.133c-0.001,0-0.003,0-0.004,0c-19.409,0-42.382-3.553-67.629-10.346
+                      c5.693-25.495,9.874-53.004,12.426-81.763c19.102-14.376,36.886-29.246,53.02-44.328c8.586,9.227,16.441,18.456,23.451,27.614
+                      C536.341,397.388,547.588,431.309,536.578,449.086z"
+                    ></path>
+                  </svg>
+                  <div id="featureCardPhysics" class="feature-card-container">
+                    <h3 class="feature-card-text heading3">
+                      <span>Physics</span>
+                    </h3>
+                    <span class="bodySmall">
+                      Explore the laws of motion and understand the behavior
+                      of matter and energy
+                    </span>
+                  </div>
+                </div>
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path
+                      d="M809.003 291.328l-297.003 171.819-297.003-171.819 275.456-157.397c4.779-2.731 9.899-4.48 15.147-5.333 9.301-1.451 18.987 0.128 27.904 5.291zM491.776 979.669c6.016 3.243 12.928 5.077 20.224 5.077 7.381 0 14.336-1.877 20.395-5.163 15.189-2.475 29.909-7.68 43.392-15.36l298.709-170.709c26.368-15.232 45.269-38.315 55.424-64.597 5.675-14.592 8.619-30.165 8.747-46.251v-341.333c0-20.395-4.821-39.723-13.397-56.917-0.939-3.029-2.219-5.973-3.883-8.832-1.963-3.371-4.267-6.357-6.912-8.96-1.323-1.835-2.731-3.669-4.139-5.419-9.813-12.203-21.845-22.528-35.456-30.507l-299.051-170.88c-26.027-15.019-55.467-19.84-83.328-15.531-15.531 2.432-30.507 7.637-44.288 15.488l-298.709 170.709c-16.341 9.429-29.824 21.888-40.149 36.267-2.56 2.56-4.864 5.547-6.784 8.832-1.664 2.901-2.987 5.888-3.925 8.96-1.707 3.456-3.243 6.955-4.608 10.496-5.632 14.635-8.576 30.208-8.704 45.995v341.632c0.043 30.293 10.581 58.197 28.331 80.128 9.813 12.203 21.845 22.528 35.456 30.507l299.051 170.88c13.824 7.979 28.587 13.099 43.605 15.445zM469.333 537.045v340.949l-277.12-158.336c-4.736-2.773-8.832-6.315-12.16-10.411-5.931-7.381-9.387-16.512-9.387-26.581v-318.379zM554.667 877.995v-340.949l298.667-172.757v318.379c-0.043 5.163-1.067 10.496-2.987 15.445-3.413 8.789-9.6 16.384-18.176 21.333z"
+                    ></path>
+                  </svg>
+                  <div id="featureCardEngineering" class="feature-card-container">
+                    <h3 class="feature-card-text heading3">
+                      <span>Engineering</span>
+                    </h3>
+                    <span class="bodySmall">
+                      <span>
+                        Apply mathematical principles to design and analyze
+                        structures, machines, and systems
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path 
+                      d="M8.49994 5.93777L7.24994 3.77271M5.93783 8.5L3.77277 7.25M5 12H2.5M5 12C5 15.866 8.13401 19 12 19M5 12C5 8.13401 8.13401 5 12 5M5.93777 15.5L3.77271 16.75M8.49994 18.0623L7.24994 20.2273M12 21.5V19M12 19C15.866 19 19 15.866 19 12M16.7501 20.2273L15.5001 18.0623M20.2273 16.75L18.0622 15.5M21.5 12H19M19 12C19 8.13401 15.866 5 12 5M20.2273 7.25L18.0622 8.5M15 15V15.01M16.7501 3.77271L15.5001 5.93777M12 5V2.5M8 11V11.01M11 15C11 15.5523 10.5523 16 10 16C9.44772 16 9 15.5523 9 15C9 14.4477 9.44772 14 10 14C10.5523 14 11 14.4477 11 15ZM15 10C15 11.1046 14.1046 12 13 12C11.8954 12 11 11.1046 11 10C11 8.89543 11.8954 8 13 8C14.1046 8 15 8.89543 15 10Z">
+                    </path>
+                  </svg>
+                  <div id="featureCardBiology" class="feature-card-container">
+                    <h3 class="feature-card-text heading3">
+                      <span>Biology</span>
+                    </h3>
+                    <span class="bodySmall">
+                      <span>
+                        Discover how mathematics is used to model biological
+                        processes and analyze data
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path d="M104.564,63.636l-32.09-18.528c-1.289-0.746-2.877-0.734-4.158,0.024L35.801,64.393
+				c-1.956,1.158-2.603,3.685-1.444,5.641c0.768,1.297,2.139,2.019,3.547,2.019c0.714,0,1.435-0.185,2.095-0.575l30.443-18.033
+				l30.005,17.324c1.968,1.134,4.485,0.458,5.625-1.508C107.209,67.291,106.535,64.774,104.564,63.636z"/>
+        <path d="M232.587,52.017l-51.789-29.901c0.229-1.162,0.363-2.36,0.363-3.589C181.16,8.311,172.85,0,162.633,0
+				c-10.217,0-18.528,8.311-18.528,18.528c0,10.217,8.311,18.528,18.528,18.528c6.03,0,11.344-2.939,14.73-7.413L226.41,57.96
+				v57.007l-49.367,28.502l-49.368-28.502V55.584c0-1.423-0.766-2.614-1.863-3.354c-0.096-0.067-0.174-0.153-0.276-0.212
+				l-0.27-0.156c-0.048-0.021-0.085-0.057-0.133-0.077L72.051,21.137c-1.275-0.736-2.843-0.736-4.117,0l-53.485,30.88
+				c-1.275,0.736-2.059,2.095-2.059,3.566v61.76c0,1.472,0.784,2.831,2.059,3.566l51.466,29.715v61.417
+				c0,1.472,0.784,2.831,2.059,3.566l53.485,30.88c0.637,0.368,1.347,0.551,2.059,0.551c0.712,0,1.421-0.183,2.059-0.551
+				l49.726-28.71c3.247,2.801,7.419,4.557,12.034,4.557c10.217,0,18.528-8.311,18.528-18.528c0-10.217-8.311-18.528-18.528-18.528
+				c-10.217,0-18.528,8.311-18.528,18.528c0,2.605,0.552,5.079,1.526,7.33l-46.816,27.03l-49.367-28.501v-59.087l49.367-28.503
+				l51.466,29.715c0.637,0.368,1.347,0.551,2.059,0.551c0.711,0,1.421-0.183,2.059-0.551l53.485-30.88
+				c1.275-0.736,2.059-2.095,2.059-3.566v-61.76C234.644,54.112,233.86,52.753,232.587,52.017z M162.633,28.821
+				c-5.675,0-10.293-4.618-10.293-10.293s4.618-10.293,10.293-10.293c5.675,0,10.293,4.618,10.293,10.293
+				S168.308,28.821,162.633,28.821z M187.336,193.513c5.675,0,10.293,4.618,10.293,10.293c0,5.675-4.618,10.293-10.293,10.293
+				c-2.371,0-4.53-0.838-6.272-2.191c-0.02-0.658-0.143-1.316-0.495-1.926c-0.584-1.008-1.533-1.665-2.582-1.926
+				c-0.594-1.299-0.945-2.731-0.945-4.25C177.042,198.131,181.66,193.513,187.336,193.513z M69.993,143.469l-49.368-28.502V57.96
+				l49.367-28.502L119.36,57.96l0.001,57.007L69.993,143.469z"/>
+                    </svg>
+                  <div id="featureCardChemistry" class="feature-card-container">
+                    <h3 class="feature-card-text heading3">
+                      <span>Chemistry</span>
+                    </h3>
+                    <span class="bodySmall">
+                      <span>
+                        Learn how mathematics is essential for understanding
+                        chemical reactions and properties
+                      </span>
+                    </span>
+                  </div>
+                </div>
+                <div class="featuresCard feature-card-feature-card">
+                  <svg viewBox="0 0 1024 1024" class="featuresIcon">
+                    <path d="M104.564,63.636l-32.09-18.528c-1.289-0.746-2.877-0.734-4.158,0.024L35.801,64.393
+				c-1.956,1.158-2.603,3.685-1.444,5.641c0.768,1.297,2.139,2.019,3.547,2.019c0.714,0,1.435-0.185,2.095-0.575l30.443-18.033
+				l30.005,17.324c1.968,1.134,4.485,0.458,5.625-1.508C107.209,67.291,106.535,64.774,104.564,63.636z"/>
+        <path d="M232.587,52.017l-51.789-29.901c0.229-1.162,0.363-2.36,0.363-3.589C181.16,8.311,172.85,0,162.633,0
+				c-10.217,0-18.528,8.311-18.528,18.528c0,10.217,8.311,18.528,18.528,18.528c6.03,0,11.344-2.939,14.73-7.413L226.41,57.96
+				v57.007l-49.367,28.502l-49.368-28.502V55.584c0-1.423-0.766-2.614-1.863-3.354c-0.096-0.067-0.174-0.153-0.276-0.212
+				l-0.27-0.156c-0.048-0.021-0.085-0.057-0.133-0.077L72.051,21.137c-1.275-0.736-2.843-0.736-4.117,0l-53.485,30.88
+				c-1.275,0.736-2.059,2.095-2.059,3.566v61.76c0,1.472,0.784,2.831,2.059,3.566l51.466,29.715v61.417
+				c0,1.472,0.784,2.831,2.059,3.566l53.485,30.88c0.637,0.368,1.347,0.551,2.059,0.551c0.712,0,1.421-0.183,2.059-0.551
+				l49.726-28.71c3.247,2.801,7.419,4.557,12.034,4.557c10.217,0,18.528-8.311,18.528-18.528c0-10.217-8.311-18.528-18.528-18.528
+				c-10.217,0-18.528,8.311-18.528,18.528c0,2.605,0.552,5.079,1.526,7.33l-46.816,27.03l-49.367-28.501v-59.087l49.367-28.503
+				l51.466,29.715c0.637,0.368,1.347,0.551,2.059,0.551c0.711,0,1.421-0.183,2.059-0.551l53.485-30.88
+				c1.275-0.736,2.059-2.095,2.059-3.566v-61.76C234.644,54.112,233.86,52.753,232.587,52.017z M162.633,28.821
+				c-5.675,0-10.293-4.618-10.293-10.293s4.618-10.293,10.293-10.293c5.675,0,10.293,4.618,10.293,10.293
+				S168.308,28.821,162.633,28.821z M187.336,193.513c5.675,0,10.293,4.618,10.293,10.293c0,5.675-4.618,10.293-10.293,10.293
+				c-2.371,0-4.53-0.838-6.272-2.191c-0.02-0.658-0.143-1.316-0.495-1.926c-0.584-1.008-1.533-1.665-2.582-1.926
+				c-0.594-1.299-0.945-2.731-0.945-4.25C177.042,198.131,181.66,193.513,187.336,193.513z M69.993,143.469l-49.368-28.502V57.96
+				l49.367-28.502L119.36,57.96l0.001,57.007L69.993,143.469z"/>
+                    </svg>
+                  <div id="featureCardComputerSccience" class="feature-card-container"> you
+                    <h3 class="feature-card-text heading3">
+                      <span>Computer Science</span>
+                    </h3>
+                    <span class="bodySmall">
+                      <span>
+                        Learn how mathematics is essential for understanding
+                        chemical reactions and properties
+                      </span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="home-pricing">
+          <div class="pricingContainer">
+            <div class="home-container04">
+              <span class="overline">
+                <span>Pricing</span>
+                <br />
+              </span>
+              <h2 class="heading2">Choose the Right Plan for You</h2>
+              <span class="home-pricing-sub-heading bodyLarge">
+                <span>
+                  <span>
+                    Unlock the full potential of mathematics in various fields
+                    with our flexible pricing options.
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div class="home-container05">
+              <div class="freePricingCard home-pricing-card">
+                <div class="home-container06">
+                  <span class="home-text36 heading3">Free</span>
+                  <span class="bodySmall">Access to basic features</span>
+                </div>
+                <div class="home-container07">
+                  <span class="home-text37">
+                    <span>$</span>
+                    <span></span>
+                  </span>
+                  <span class="home-free-plan-price">0</span>
+                </div>
+                <div class="home-container08">
+                  <div class="home-container09">
+                    <span class="home-text40">✔</span>
+                    <span class="bodySmall">
+                      Limited access to all subject areas
+                    </span>
+                  </div>
+                  <div class="home-container10">
+                    <span class="home-text41">✔</span>
+                    <span class="bodySmall">No premium support</span>
+                  </div>
+                </div>
+                <button class="home-button buttonOutline">
+                  Continue with Free
+                </button>
+              </div>
+              <div class="basicPricingCard home-pricing-card1">
+                <div class="home-container11">
+                  <span class="home-text42 heading3">BASIC</span>
+                  <span class="bodySmall">Access to advanced features</span>
+                </div>
+                <div class="home-container12">
+                  <span class="home-text43">
+                    <span>$</span>
+                    <span></span>
+                  </span>
+                  <span class="home-basic-plan-pricing">20</span>
+                  <span class="home-text46">/ month</span>
+                </div>
+                <div class="home-container13">
+                  <div class="home-container14">
+                    <span class="home-text47">✔</span>
+                    <span class="bodySmall">All features of FREE plan</span>
+                  </div>
+                  <div class="home-container15">
+                    <span class="home-text49">✔</span>
+                    <span class="bodySmall">
+                      Full access to all subject areas
+                    </span>
+                  </div>
+                  <div class="home-container16">
+                    <span class="home-text50">✔</span>
+                    <span class="bodySmall">Basic support</span>
+                  </div>
+                  <div class="home-container17">
+                    <span class="home-text51">✔</span>
+                    <span class="bodySmall">Offline access to content</span>
+                  </div>
+                  <div class="home-container18">
+                    <span class="home-text52">✔</span>
+                    <span class="bodySmall">No ads</span>
+                  </div>
+                </div>
+                <button class="home-button1 buttonFilledSecondary">
+                  Try the Basic plan
+                </button>
+              </div>
+              <div class="proPricingCard home-pricing-card2">
+                <div class="home-container19">
+                  <span class="home-text53 heading3">
+                    <span>PRO</span>
+                    <br />
+                  </span>
+                  <span class="bodySmall">Access to premium features</span>
+                </div>
+                <div class="home-container20">
+                  <span class="home-text56">
+                    <span>$</span>
+                    <span></span>
+                  </span>
+                  <span class="home-pro-plan-pricing">50</span>
+                  <span class="home-text59">/ month</span>
+                </div>
+                <div class="home-container21">
+                  <div class="home-container22">
+                    <span class="home-text60">✔</span>
+                    <span class="bodySmall">
+                      &nbsp;All features of BASIC plan
+                    </span>
+                  </div>
+                  <div class="home-container23">
+                    <span class="home-text62">✔</span>
+                    <span class="bodySmall">
+                      Full access to all subject areas
+                    </span>
+                  </div>
+                  <div class="home-container24">
+                    <span class="home-text63">✔</span>
+                    <span class="bodySmall">Priority support</span>
+                  </div>
+                  <div class="home-container25">
+                    <span class="home-text64">✔</span>
+                    <span class="bodySmall">Offline access to content</span>
+                  </div>
+                  <div class="home-container26">
+                    <span class="home-text65">✔</span>
+                    <span class="bodySmall">No ads</span>
+                  </div>
+                </div>
+                <button class="home-button2 buttonFilledSecondary">
+                  Try the PRO plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div> -->
+        <div class="home-banner">
+          <div class="bannerContainer home-banner1">
+            <h1 class="home-banner-heading heading2">
+              Discover the Intersection of Mathematics and Science
+            </h1>
+            <span class="home-banner-sub-heading bodySmall">
+                  <span>
+                    Delve into the fascinating world where mathematics meets
+                    physics, engineering, biology, chemistry, and computer
+                    science. Explore how mathematical concepts and techniques
+                    are applied in these fields to solve complex problems and
+                    drive innovation.
+                  </span>
+            </span>
+            <button class="buttonFilled">Read More</button>
+          </div>
+        </div>
+        <div class="home-faq">
+          <div class="faqContainer">
+            <div class="home-faq1">
+              <div class="home-container27">
+                <span class="overline">
+                  <span>FAQ</span>
+                  <br />
+                </span>
+                <h2 class="home-text83 heading2">Common questions</h2>
+                <span class="home-text84 bodyLarge">
+                  <span>
+                    Here are some of the most common questions that we get.
+                  </span>
+                  <br />
+                </span>
+              </div>
+              <div class="home-container28">
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>
+                      What are the applications of mathematics in physics?
+                    </span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      Mathematics is used in physics to describe and analyze
+                      physical phenomena, such as motion, forces, and energy. It
+                      helps in formulating equations, solving problems, and
+                      making predictions.
+                    </span>
+                  </span>
+                </div>
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>How is mathematics applied in engineering?</span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      Mathematics is essential in engineering for modeling and
+                      analyzing complex systems, designing structures, solving
+                      equations, and optimizing processes.
+                    </span>
+                  </span>
+                </div>
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>What are the uses of mathematics in biology?</span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      Mathematics plays a crucial role in biology by providing
+                      tools for modeling biological processes, analyzing data,
+                      understanding population dynamics, and studying genetics.
+                    </span>
+                  </span>
+                </div>
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>How does mathematics contribute to chemistry?</span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      Mathematics is used in chemistry to understand chemical
+                      reactions, calculate reaction rates, determine molecular
+                      structures, and analyze experimental data.
+                    </span>
+                  </span>
+                </div>
+                <div class="question1-container">
+                  <span class="question1-text heading3">
+                    <span>
+                      What is the role of mathematics in computer science?
+                    </span>
+                  </span>
+                  <span class="bodySmall">
+                    <span>
+                      Mathematics forms the foundation of computer science by
+                      providing algorithms, logic, and computational techniques.
+                      It is used in areas such as cryptography, artificial
+                      intelligence, and data analysis.
+                    </span>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home-footer">
+          <footer class="footerContainer home-footer1">
+            <div class="home-container29">
+              <span class="logo">MATHX</span>
+              <nav class="home-nav1">
+                <span class="bodySmall">Physics</span>
+                <span class="home-nav222 bodySmall">Engineering</span>
+                <span class="home-nav322 bodySmall">Biology</span>
+                <span class="home-nav422 bodySmall">Chemistry</span>
+                <span class="home-nav522 bodySmall">Computer Science</span>
+              </nav>
+            </div>
+            <div class="home-separator"></div>
+            <div class="home-container30">
+              <span class="bodySmall home-text87">
+                © 2024 MATHX, All Rights Reserved.
+              </span>
+              <div class="home-icon-group1">
+                <svg
+                  viewBox="0 0 950.8571428571428 1024"
+                  class="home-icon10 socialIcons"
+                >
+                  <path
+                    d="M925.714 233.143c-25.143 36.571-56.571 69.143-92.571 95.429 0.571 8 0.571 16 0.571 24 0 244-185.714 525.143-525.143 525.143-104.571 0-201.714-30.286-283.429-82.857 14.857 1.714 29.143 2.286 44.571 2.286 86.286 0 165.714-29.143 229.143-78.857-81.143-1.714-149.143-54.857-172.571-128 11.429 1.714 22.857 2.857 34.857 2.857 16.571 0 33.143-2.286 48.571-6.286-84.571-17.143-148-91.429-148-181.143v-2.286c24.571 13.714 53.143 22.286 83.429 23.429-49.714-33.143-82.286-89.714-82.286-153.714 0-34.286 9.143-65.714 25.143-93.143 90.857 112 227.429 185.143 380.571 193.143-2.857-13.714-4.571-28-4.571-42.286 0-101.714 82.286-184.571 184.571-184.571 53.143 0 101.143 22.286 134.857 58.286 41.714-8 81.714-23.429 117.143-44.571-13.714 42.857-42.857 78.857-81.143 101.714 37.143-4 73.143-14.286 106.286-28.571z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 877.7142857142857 1024"
+                  class="home-icon12 socialIcons"
+                >
+                  <path
+                    d="M585.143 512c0-80.571-65.714-146.286-146.286-146.286s-146.286 65.714-146.286 146.286 65.714 146.286 146.286 146.286 146.286-65.714 146.286-146.286zM664 512c0 124.571-100.571 225.143-225.143 225.143s-225.143-100.571-225.143-225.143 100.571-225.143 225.143-225.143 225.143 100.571 225.143 225.143zM725.714 277.714c0 29.143-23.429 52.571-52.571 52.571s-52.571-23.429-52.571-52.571 23.429-52.571 52.571-52.571 52.571 23.429 52.571 52.571zM438.857 152c-64 0-201.143-5.143-258.857 17.714-20 8-34.857 17.714-50.286 33.143s-25.143 30.286-33.143 50.286c-22.857 57.714-17.714 194.857-17.714 258.857s-5.143 201.143 17.714 258.857c8 20 17.714 34.857 33.143 50.286s30.286 25.143 50.286 33.143c57.714 22.857 194.857 17.714 258.857 17.714s201.143 5.143 258.857-17.714c20-8 34.857-17.714 50.286-33.143s25.143-30.286 33.143-50.286c22.857-57.714 17.714-194.857 17.714-258.857s5.143-201.143-17.714-258.857c-8-20-17.714-34.857-33.143-50.286s-30.286-25.143-50.286-33.143c-57.714-22.857-194.857-17.714-258.857-17.714zM877.714 512c0 60.571 0.571 120.571-2.857 181.143-3.429 70.286-19.429 132.571-70.857 184s-113.714 67.429-184 70.857c-60.571 3.429-120.571 2.857-181.143 2.857s-120.571 0.571-181.143-2.857c-70.286-3.429-132.571-19.429-184-70.857s-67.429-113.714-70.857-184c-3.429-60.571-2.857-120.571-2.857-181.143s-0.571-120.571 2.857-181.143c3.429-70.286 19.429-132.571 70.857-184s113.714-67.429 184-70.857c60.571-3.429 120.571-2.857 181.143-2.857s120.571-0.571 181.143 2.857c70.286 3.429 132.571 19.429 184 70.857s67.429 113.714 70.857 184c3.429 60.571 2.857 120.571 2.857 181.143z"
+                  ></path></svg
+                ><svg
+                  viewBox="0 0 602.2582857142856 1024"
+                  class="home-icon14 socialIcons"
+                >
+                  <path
+                    d="M548 6.857v150.857h-89.714c-70.286 0-83.429 33.714-83.429 82.286v108h167.429l-22.286 169.143h-145.143v433.714h-174.857v-433.714h-145.714v-169.143h145.714v-124.571c0-144.571 88.571-223.429 217.714-223.429 61.714 0 114.857 4.571 130.286 6.857z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
