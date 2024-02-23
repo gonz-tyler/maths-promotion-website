@@ -1,3 +1,41 @@
+//splash screen
+
+const splash = document.querySelector('.splash');
+
+document.addEventListener('DOMContentLoaded', (e)=>{
+    setTimeout((()=>{
+        splash.classList.add('display-none');
+    }), 2000);
+})
+
+function fade(element) {
+  var op = 1;  // initial opacity
+  var timer = setInterval(function () {
+      if (op <= 0.1){
+          clearInterval(timer);
+          element.style.display = 'none';
+      }
+      element.style.opacity = op;
+      element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+      op -= op * 0.1;
+  }, 50);
+}
+
+function unfade(element) {
+var op = 0.01;  // initial opacity
+element.style.display = 'block';
+var timer = setInterval(function () {
+    if (op >= 1){
+        clearInterval(timer);
+    }
+    element.style.opacity = op;
+    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+    op += op * 0.1;
+}, 10);
+}
+
+//theme change
+
 const toggleButton = document.getElementById('dark-mode-toggle');
 const lightModeStylesheet = document.getElementById('light-mode-stylesheet');
 const darkModeStylesheet = document.getElementById('dark-mode-stylesheet');
@@ -9,6 +47,7 @@ const storedTheme = localStorage.getItem('theme');
 if (storedTheme === 'dark') {
   lightModeStylesheet.disabled = true;
   darkModeStylesheet.disabled = false;
+  toggleButton.checked = true
 }
 
 toggleButton.addEventListener('click', () => {
@@ -21,20 +60,22 @@ toggleButton.addEventListener('click', () => {
   localStorage.setItem('theme', currentTheme);
 });
 
+// page navigation
+
 document.getElementById("featureCardPhysics").addEventListener('click', function() {
-  window.location.href = 'landing.html';
+  window.location.href = 'physics.html';
 });
 document.getElementById("featureCardChemistry").addEventListener('click', function() {
-  window.location.href = 'landing.html';
+  window.location.href = 'chemistry.html';
 });
 document.getElementById("featureCardEngineering").addEventListener('click', function() {
-  window.location.href = 'landing.html';
+  window.location.href = 'engineering.html';
 });
 document.getElementById("featureCardBiology").addEventListener('click', function() {
-  window.location.href = 'landing.html';
+  window.location.href = 'biology.html';
 });
 document.getElementById("featureCardComputerScience").addEventListener('click', function() {
-  window.location.href = 'landing.html';
+  window.location.href = 'computerscience.html';
 });
 
 document.getElementById("physics").addEventListener('click', function() {
@@ -52,3 +93,4 @@ document.getElementById("biology").addEventListener('click', function() {
 document.getElementById("computerScience").addEventListener('click', function() {
   window.location.href = 'landing.html';
 });
+

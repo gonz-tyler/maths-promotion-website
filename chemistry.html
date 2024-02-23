@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <title>MATHX</title>
-    <link rel="icon" href="./images/icon.png" type="image/png">
+    <link rel="icon" href="./assets/images/icon.png" type="image/png">
     <meta property="og:title" content="MATHX" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta charset="utf-8" />
@@ -44,11 +44,11 @@
     </style>
   </head>
   <body>
-    <link rel="stylesheet" id="light-mode-stylesheet" href="./light-mode.css" />
-    <link rel="stylesheet" id="dark-mode-stylesheet" href="./dark-mode.css" disabled/>
+    <link rel="stylesheet" id="light-mode-stylesheet" href="./assets/style/light-mode.css" />
+    <link rel="stylesheet" id="dark-mode-stylesheet" href="./assets/style/dark-mode.css" disabled/>
 
     <div>
-      <link href="./index.css" rel="stylesheet" />
+      <link href="./assets/style/index.css" rel="stylesheet" />
 
       <div class="home-container">
         <div class="home-header">
@@ -66,7 +66,11 @@
                 <a href="computerscience.html"><button id="computerScience" class="home-nav52 buttonFlat">Computer Science</button></a>
               </nav>
               <div class="home-buttons">
-                <button id="dark-mode-toggle" class="buttonFilled">Toggle Dark Mode</button>
+                <!-- <button id="dark-mode-toggle" class="buttonFilled">Toggle Dark Mode</button> -->
+                <label class="switch">Toggle Dark Mode
+                  <input type="checkbox" id="dark-mode-toggle" unchecked>
+                  <span class="slider round"></span>
+                </label>
                 <button class="home-login buttonFlat">Login</button>
                 <button class="buttonFilled">Register</button>
               </div>
