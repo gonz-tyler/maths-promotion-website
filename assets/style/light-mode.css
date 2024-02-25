@@ -1,5 +1,32 @@
 :root {
   --color-gray: rgb(255,255,255, 65%);
+
+  --color-accent: #2196f3;
+  --color-primary1: #0060B9;
+  --color-primary2: #003D75;
+  --color-primary3: #002950;
+  --color-secondary1: #E5F0FF;
+  --color-background1: #FFFFFF;
+  --color-background2: #E5F0FF;
+  --color-neutral-dark: #141A22;
+  --color-neutral-light: #FFFFFF;
+  --color-primary-text: #000000;
+  --color-secondary-text: #FFFFFF;
+  --color-shadow1: rgba(0, 0, 0, 0.1);
+  --color-shadow1: rgba(0, 0, 0, 0.2);
+
+  --fontsize-xsmall: 12px;
+  --fontsize-small: 18px;
+  --fontsize-smedium: 22px;
+  --fontsize-medium: 26px;
+  --fontsize-lmedium: 30px;
+  --fontsize-large: 34px;
+  --fontsize-xlarge: 48px;
+  --fontsize-xxlarge: 64px;
+
+  --switchwidth: 40px;
+  --switchheight: calc(var(--switchwidth)/2);
+
   
   --color-gray-500: #595959;
   --color-gray-700: #999999;
