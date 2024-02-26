@@ -3,8 +3,30 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-  font-family: 'Lato', sans-serif;
+.menu-button-container {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 300;
+  color: #fff;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 2000000;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
 }
 
 .overlay {
@@ -14,8 +36,8 @@ body {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: rgb(255,255,255);
-  background-color: rgba(255,255,255, 0.9);
+  background-color: var(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -56,12 +78,21 @@ body {
   right: 35px;
   }
 }
+
+
 </style>
 </head>
 <body>
 
+<p>Click on the Menu Icon to transform it to "X":</p>
+<div class="menu-button-container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
 <div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  
   <div class="overlay-content">
     <a href="#">About</a>
     <a href="#">Services</a>
@@ -70,21 +101,25 @@ body {
   </div>
 </div>
 
-<h2>Fullscreen Overlay Nav Example</h2>
-<p>Click on the element below to open the fullscreen overlay navigation menu.</p>
-<p>In this example, the navigation menu will slide in, from left to right:</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-
 <script>
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+function myFunction(x) {
+  x.classList.toggle("change");
+  var myNav = document.getElementById("myNav");
+  if (myNav.style.width === "100%") {
+    myNav.style.width = "0%";
+  } else {
+    myNav.style.width = "100%";
+  }
 }
 
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+  var myNav = document.getElementById("myNav");
+  var container = document.querySelector(".container");
+  
+  myNav.style.width = "0%";
+  container.classList.remove("change");
 }
 </script>
-     
+
 </body>
 </html>
-
