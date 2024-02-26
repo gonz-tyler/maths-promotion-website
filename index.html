@@ -104,7 +104,9 @@
             </div>
           </div> -->
           <!-- Hamburger icon -->
-          <div id="menu-button" class="hamburger-icon button">&#9776;
+          
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+          <!-- <div id="menu-button" class="hamburger-icon button">&#9776; -->
 
           <!-- Desktop menu -->
           <!-- <div id="desktop-menu" class="desktop-menu">
@@ -114,7 +116,7 @@
           </div> -->
 
           <!-- Mobile menu -->
-          <div id="mobile-menu" class="mobile-menu">
+          <!-- <div id="mobile-menu" class="mobile-menu">
             <nav>
               <a href="physics.html"><button id="physics" class="buttonFlat">Physics</button></a>
               <a href="engineering.html"><button id="engineering" class="buttonFlat">Engineering</button></a>
@@ -122,8 +124,19 @@
               <a href="chemistry.html"><button id="chemistry" class="buttonFlat">Chemistry</button></a>
               <a href="computerscience.html"><button id="computerScience" class="buttonFlat">Computer Science</button></a>
             </nav>
+          </div> -->
+          <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+              <a href="physics.html"><button id="physics" class="buttonFlat">Physics</button></a>
+              <a href="engineering.html"><button id="engineering" class="buttonFlat">Engineering</button></a>
+              <a href="biology.html"><button id="biology" class="buttonFlat">Biology</button></a>
+              <a href="chemistry.html"><button id="chemistry" class="buttonFlat">Chemistry</button></a>
+              <a href="computerscience.html"><button id="computerScience" class="buttonFlat">Computer Science</button></a>
+              <input type="checkbox" id="dark-mode-toggle" /><label for="dark-mode-toggle"></label>
+            </div>
           </div>
-          </div>
+
         </header>
       </div>
       <div class="hero">
