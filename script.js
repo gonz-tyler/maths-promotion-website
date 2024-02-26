@@ -1,38 +1,60 @@
 //splash screen
 
-const splash = document.querySelector('.splash');
+// const splash = document.querySelector('.splash');
 
-document.addEventListener('DOMContentLoaded', (e)=>{
-    setTimeout((()=>{
-        splash.classList.add('display-none');
-    }), 2000);
-})
+// document.addEventListener('DOMContentLoaded', (e)=>{
+//     setTimeout((()=>{
+//         splash.classList.add('display-none');
+//     }), 2000);
+// })
 
-function fade(element) {
-  var op = 1;  // initial opacity
-  var timer = setInterval(function () {
-      if (op <= 0.1){
-          clearInterval(timer);
-          element.style.display = 'none';
-      }
-      element.style.opacity = op;
-      element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-      op -= op * 0.1;
-  }, 50);
-}
+// function fade(element) {
+//   var op = 1;  // initial opacity
+//   var timer = setInterval(function () {
+//       if (op <= 0.1){
+//           clearInterval(timer);
+//           element.style.display = 'none';
+//       }
+//       element.style.opacity = op;
+//       element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+//       op -= op * 0.1;
+//   }, 50);
+// }
 
-function unfade(element) {
-var op = 0.01;  // initial opacity
-element.style.display = 'block';
-var timer = setInterval(function () {
-    if (op >= 1){
-        clearInterval(timer);
-    }
-    element.style.opacity = op;
-    element.style.filter = 'alpha(opacity=' + op * 100 + ")";
-    op += op * 0.1;
-}, 10);
-}
+// function unfade(element) {
+// var op = 0.01;  // initial opacity
+// element.style.display = 'block';
+// var timer = setInterval(function () {
+//     if (op >= 1){
+//         clearInterval(timer);
+//     }
+//     element.style.opacity = op;
+//     element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+//     op += op * 0.1;
+// }, 10);
+// }
+
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if the splash screen has been shown before in this session
+  if (!sessionStorage.getItem('splashScreenShown')) {
+      // Show the splash screen
+      document.getElementById('splash-screen').classList.remove('display-none');
+
+      // Set the flag indicating that the splash screen has been shown in this session
+      sessionStorage.setItem('splashScreenShown', true);
+
+      // Fade out the splash screen after 3 seconds (adjust as needed)
+      setTimeout(function() {
+          document.getElementById('splash-screen').classList.add('fade-out');
+          setTimeout(function() {
+              document.getElementById('splash-screen').classList.add('display-none');
+          }, 1000); // Adjust the duration of the fade out animation
+      }, 3000); // Adjust the duration of the splash screen display
+  } else {
+      // Hide the splash screen
+      document.getElementById('splash-screen').classList.add('display-none');
+  }
+});
 
 //theme change
 
@@ -94,3 +116,22 @@ document.getElementById("computerScience").addEventListener('click', function() 
   window.location.href = 'landing.html';
 });
 
+
+// JavaScript to toggle the visibility of the mobile menu and change the button icon
+document.addEventListener('DOMContentLoaded', function() {
+  var menuButton = document.getElementById('menu-button');
+  var mobileMenu = document.getElementById('mobile-menu');
+  var desktopMenu = document.getElementById('desktop-menu');
+
+  menuButton.addEventListener('click', function() {
+      mobileMenu.classList.toggle('open');
+      menuButton.classList.toggle('close-icon');
+  });
+
+  window.addEventListener('resize', function() {
+      if (window.innerWidth > 768) {
+          mobileMenu.classList.remove('open');
+          menuButton.classList.remove('close-icon');
+      }
+  });
+});

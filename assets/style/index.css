@@ -4,20 +4,6 @@
   display: block;
   justify-content: center;
 }
-.splash {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-.splash img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 100%;
-  max-height: 100%;
-}
 .main-container {
   /* max-width: 1200px; */
   margin: 0 auto;
@@ -34,7 +20,7 @@
   font-size: var(--fontsize-xxlarge);
   font-weight: bold;
 }
-.navbarContainer {
+.navbar-container {
   display: flex;
   align-items: center;
 }
@@ -45,6 +31,12 @@
 .home-links {
   display: flex;
   gap: 20px;
+}
+.mobile-menu {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-direction: column;
 }
 .home-buttons {
   display: flex;
@@ -305,6 +297,55 @@ label:active:after {
   fill: var(--color-accent);
 }
 
+
+/* CSS for the mobile menu */
+.mobile-menu {
+  display: none;
+}
+
+/* CSS for the hamburger icon */
+.hamburger-icon {
+  display: block;
+  width: 30px;
+  height: 30px;
+  /* background-color: black; */
+  cursor: pointer;
+}
+
+/* CSS for the close icon */
+.close-icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  /* background-color: black; */
+  cursor: pointer;
+}
+
+/* CSS for the mobile menu items */
+.mobile-menu.open {
+  display: block;
+}
+
+/* CSS for the hamburger icon when the mobile menu is open */
+.mobile-menu.open .hamburger-icon {
+  display: none;
+}
+
+/* CSS for the close icon when the mobile menu is open */
+.mobile-menu.open .close-icon {
+  display: block;
+}
+
+/* CSS for the mobile menu items when the mobile menu is open */
+.mobile-menu.open .menu-item {
+  display: block;
+}
+
+/* CSS for the button */
+.button {
+  display: none;
+}
+
 @media (min-width: 768px) {
   
   .faq .faq-heading-container {
@@ -317,19 +358,25 @@ label:active:after {
   .home-mobile-menu1 {
     display: none;
   }
+  .home-burger-menu {
+    display: none;
+  }
 }
 
 /* Media query for smaller screens */
 
 
-@media (max-width: 1190px) {
+@media (max-width: 1270px) {
   .home-desktop-menu {
     display: none;
   }
   .home-burger-menu {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
+  }
+  .button {
+    display: block;
   }
 }
 @media screen and (max-width: 768px) {
@@ -347,4 +394,67 @@ label:active:after {
     justify-content: center;
     align-items: center;
   }
+  .home-mobile-menu1 {
+    display: none;
+  }
+  .home-burger-menu {
+    display: none;
+  }
+  .button {
+    display: block;
+  }
+
+  .desktop-menu {
+      display: none;
+  }
+}
+.splash {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.splash img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  max-height: 100%;
+}
+.splash {
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--color-custom-secondary1); /*was black*/
+  z-index: 200;
+  align-self: center;
+  line-height: 120vh;
+}
+
+
+.splash.display-none {
+  position:fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #212121; /*was black*/
+  z-index: -10;
+  align-self: center;
+  line-height: 120vh;
+}
+
+@keyframes fadeOut{
+  to{
+    opacity: 0;
+  }
+}
+
+.fade-out{
+  opacity: 1;
+  animation: fadeOut 1s forwards 1s;
 }

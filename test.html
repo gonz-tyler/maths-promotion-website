@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamburger Menu Example</title>
+    <style>
+        /* CSS for the mobile menu */
+        .mobile-menu {
+            display: none;
+        }
+
+        /* CSS for the hamburger icon */
+        .hamburger-icon {
+            display: block;
+            width: 30px;
+            height: 30px;
+            /* background-color: black; */
+            cursor: pointer;
+        }
+
+        /* CSS for the close icon */
+        .close-icon {
+            display: none;
+            width: 30px;
+            height: 30px;
+            /* background-color: black; */
+            cursor: pointer;
+        }
+
+        /* CSS for the mobile menu items */
+        .mobile-menu.open {
+            display: block;
+        }
+
+        /* CSS for the hamburger icon when the mobile menu is open */
+        .mobile-menu.open .hamburger-icon {
+            display: none;
+        }
+
+        /* CSS for the close icon when the mobile menu is open */
+        .mobile-menu.open .close-icon {
+            display: block;
+        }
+
+        /* CSS for the mobile menu items when the mobile menu is open */
+        .mobile-menu.open .menu-item {
+            display: block;
+        }
+
+        /* CSS for the button */
+        .button {
+            display: none;
+        }
+
+        /* CSS for the button when the screen size is small enough */
+        @media (max-width: 768px) {
+            .button {
+                display: block;
+            }
+
+            .desktop-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger icon -->
+    <div id="menu-button" class="hamburger-icon button">&#9776;</div>
+
+    <!-- Desktop menu -->
+    <div id="desktop-menu" class="desktop-menu">
+        <div class="menu-item">FMenu Item 1</div>
+        <div class="menu-item">FMenu Item 2</div>
+        <div class="menu-item">FMenu Item 3</div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu">
+        <div class="menu-item">Menu Item 1</div>
+        <div class="menu-item">Menu Item 2</div>
+        <div class="menu-item">Menu Item 3</div>
+    </div>
+
+    <script>
+        // JavaScript to toggle the visibility of the mobile menu and change the button icon
+        document.addEventListener('DOMContentLoaded', function() {
+            var menuButton = document.getElementById('menu-button');
+            var mobileMenu = document.getElementById('mobile-menu');
+            var desktopMenu = document.getElementById('desktop-menu');
+
+            menuButton.addEventListener('click', function() {
+                mobileMenu.classList.toggle('open');
+                menuButton.classList.toggle('close-icon');
+            });
+
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768) {
+                    mobileMenu.classList.remove('open');
+                    menuButton.classList.remove('close-icon');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
