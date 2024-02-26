@@ -1,6 +1,6 @@
 /* Custom styles */
 .container {
-  max-width: 1200px;
+  max-width: 1000px;
   display: block;
   justify-content: center;
 }
@@ -145,11 +145,6 @@ label:active:after {
   display: flex;
   justify-content: center;
 }
-/* .features .features-container {
-  max-width: 1200px;
-  display: block;
-  justify-content: center;
-} */
 .features .features-heading-container {
   text-align: center;
 }
