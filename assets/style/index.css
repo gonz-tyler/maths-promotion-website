@@ -137,7 +137,7 @@ label:active:after {
   color: var(--color-primary2);
 }
 .features {
-  width: 100vw;
+  width: 100%;
   height: auto;
   padding: 40px;
   background-color: var(--color-background2);
