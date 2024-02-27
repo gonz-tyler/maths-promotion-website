@@ -1,4 +1,33 @@
 /* Custom styles */
+.menu-button-container {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 300;
+  /* color: #fff; */
+  position: relative;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--color-primary-text);
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 2000000;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+  z-index: 2000;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+  z-index: 2000;
+}
+
 .overlay {
   height: 100%;
   width: 0;
@@ -6,8 +35,8 @@
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: var(--color-background2);
-  background-color: rgba(0,0,0, 0.9);
+  /* background-color: rgb(255,0,0); */
+  background-color: var(--color-overlay);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -38,6 +67,56 @@
   top: 20px;
   right: 45px;
   font-size: 60px;
+}
+
+/* mobile toggle */
+/* .overlay .overlay-content .dark-mode-toggle-mobile {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%); Center the toggle button
+} */
+.overlay .overlay-content .dark-mode-toggle-mobile input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  /* display: block; */
+  /* left: 50%; */
+  justify-content: center;
+}
+.overlay .overlay-content .dark-mode-toggle-mobile label {
+  cursor: pointer;
+  width: var(--switchwidth);
+  height: var(--switchheight);
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: absolute;
+  /* top: 50vh; */
+  left: 47.8vw;
+  /* transition: 0.3s; */
+}
+.overlay .overlay-content .dark-mode-toggle-mobile label:after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 2.5%;
+  width: 45%;
+  height: 90%;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.overlay .overlay-content .dark-mode-toggle-mobile input:checked + label {
+  background: var(--color-accent);
+}
+.overlay .overlay-content .dark-mode-toggle-mobile input:checked + label:after {
+  left: calc(100% - 2.5%);
+  transform: translateX(-100%);
+}
+.overlay .overlay-content .dark-mode-toggle-mobile label:active:after {
+  width: 65%;
 }
 
 @media screen and (max-height: 450px) {
@@ -107,12 +186,12 @@
   padding-right: var(--space-space-oneandhalfunits);
   padding-bottom: var(--space-space-halfunit);
 }
-input[type=checkbox]{
+.dark-mode-toggle input[type=checkbox]{
   height: 0;
   width: 0;
   visibility: hidden;
 }
-label {
+.dark-mode-toggle label {
   cursor: pointer;
   width: var(--switchwidth);
   height: var(--switchheight);
@@ -121,9 +200,11 @@ label {
   align-items: center;
   justify-content: center;
   border-radius: 100px;
-  position: relative;
+  position: fixed;
+  right: 140px;
+  top: 60px;
 }
-label:after {
+.dark-mode-toggle label:after {
   content: '';
   position: absolute;
   top: 5%;
@@ -134,16 +215,19 @@ label:after {
   border-radius: 90px;
   transition: 0.3s;
 }
-input:checked + label {
+.dark-mode-toggle input:checked + label {
   background: var(--color-accent);
 }
-input:checked + label:after {
+.dark-mode-toggle input:checked + label:after {
   left: calc(100% - 2.5%);
   transform: translateX(-100%);
 }
-label:active:after {
+.dark-mode-toggle label:active:after {
   width: 65%;
 }
+
+
+
 .home-burger-menu {
   display: none;
 }
@@ -336,6 +420,7 @@ label:active:after {
 
 .footer .home-separator .content-text {
   font-size: var(--fontsize--xsmall);
+  padding: 20px;
 }
 
 .footer .social-icons {
@@ -394,7 +479,7 @@ label:active:after {
 }
 
 /* CSS for the button */
-.button {
+.menu-button-container {
   display: none;
 }
 
@@ -427,8 +512,26 @@ label:active:after {
     align-items: center;
     justify-content: center;
   }
-  .button {
+  .menu-button-container {
     display: block;
+  }
+  /* label {
+    display: none;
+  }
+  .dark-toggle-label {
+    display: none;
+  } */
+  
+  /* .dark-mode-toggle label {
+    display: fixed;
+    top: 90vh;
+    right: 5vh;
+  } */
+  .dark-mode-toggle label {
+    display: none;
+  }
+  .dark-mode-toggle span {
+    display: none;
   }
 }
 @media screen and (max-width: 768px) {
@@ -452,7 +555,7 @@ label:active:after {
   .home-burger-menu {
     display: none;
   }
-  .button {
+  .menu-button-container {
     display: block;
   }
 

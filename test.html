@@ -8,6 +8,7 @@
   cursor: pointer;
   z-index: 300;
   color: #fff;
+  position: relative;
 }
 
 .bar1, .bar2, .bar3 {
@@ -21,12 +22,14 @@
 
 .change .bar1 {
   transform: translate(0, 11px) rotate(-45deg);
+  z-index: 2000;
 }
 
 .change .bar2 {opacity: 0;}
 
 .change .bar3 {
   transform: translate(0, -11px) rotate(45deg);
+  z-index: 2000;
 }
 
 .overlay {
@@ -85,13 +88,9 @@
 <body>
 
 <p>Click on the Menu Icon to transform it to "X":</p>
-<div class="menu-button-container" onclick="myFunction(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
-</div>
 
-<div id="myNav" class="overlay">
+
+<div id="mobile-nav" class="overlay">
   
   <div class="overlay-content">
     <a href="#">About</a>
@@ -101,10 +100,16 @@
   </div>
 </div>
 
+<div class="menu-button-container" onclick="myFunction(this)">
+  <div class="bar1"></div>
+  <div class="bar2"></div>
+  <div class="bar3"></div>
+</div>
+
 <script>
 function myFunction(x) {
   x.classList.toggle("change");
-  var myNav = document.getElementById("myNav");
+  var myNav = document.getElementById("mobile-nav");
   if (myNav.style.width === "100%") {
     myNav.style.width = "0%";
   } else {
@@ -113,8 +118,8 @@ function myFunction(x) {
 }
 
 function closeNav() {
-  var myNav = document.getElementById("myNav");
-  var container = document.querySelector(".container");
+  var myNav = document.getElementById("mobile-nav");
+  var container = document.querySelector(".menu-button-container");
   
   myNav.style.width = "0%";
   container.classList.remove("change");

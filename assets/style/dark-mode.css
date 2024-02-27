@@ -1,4 +1,6 @@
 :root {
+  --color-overlay: rgb(0,0,0, 85%);
+
   --color-accent: #2196f3;
   --color-primary1: #0060B9;
   --color-primary2: #003D75;

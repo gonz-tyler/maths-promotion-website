@@ -1,4 +1,135 @@
 /* Custom styles */
+/* Custom styles */
+.menu-button-container {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 300;
+  color: #fff;
+  position: relative;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+  z-index: 2000000;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+  z-index: 2000;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+  z-index: 2000;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  /* background-color: rgb(255,0,0); */
+  background-color: var(--color-overlay);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+/* mobile toggle */
+/* .overlay .overlay-content .dark-mode-toggle-mobile {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%); Center the toggle button
+} */
+.overlay .overlay-content .dark-mode-toggle-mobile input[type=checkbox]{
+  height: 0;
+  width: 0;
+  visibility: hidden;
+  /* display: block; */
+  /* left: 50%; */
+  justify-content: center;
+}
+.overlay .overlay-content .dark-mode-toggle-mobile label {
+  cursor: pointer;
+  width: var(--switchwidth);
+  height: var(--switchheight);
+  background: grey;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  position: absolute;
+  /* top: 50vh; */
+  left: 47.8vw;
+  /* transition: 0.3s; */
+}
+.overlay .overlay-content .dark-mode-toggle-mobile label:after {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 2.5%;
+  width: 45%;
+  height: 90%;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+.overlay .overlay-content .dark-mode-toggle-mobile input:checked + label {
+  background: var(--color-accent);
+}
+.overlay .overlay-content .dark-mode-toggle-mobile input:checked + label:after {
+  left: calc(100% - 2.5%);
+  transform: translateX(-100%);
+}
+.overlay .overlay-content .dark-mode-toggle-mobile label:active:after {
+  width: 65%;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -281,6 +412,7 @@ img {
   
   .footer .home-separator .content-text {
     font-size: var(--fontsize--xsmall);
+    padding: 20px;
   }
   
   .footer .social-icons {
@@ -293,47 +425,25 @@ img {
     height: 40px;
     fill: var(--color-accent);
   }
-  
-  @media (min-width: 768px) {
-    
-    .faq .faq-heading-container {
-      flex-basis: 33.33%; /* Set the width of the heading container to one third */
-    }
-  
-    .faq .faq-questions-container {
-      flex-basis: 66.66%; /* Set the width of the questions container to two thirds */
-    }
-    .home-mobile-menu1 {
-      display: none;
-    }
+
+  .menu-button-container {
+    display: none;
   }
   
   /* Media query for smaller screens */
-  
-  
-  @media (max-width: 1190px) {
+  @media (max-width: 1270px) {
     .home-desktop-menu {
       display: none;
     }
     .home-burger-menu {
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
     }
-  }
-  @media screen and (max-width: 768px) {
-    
-    .features .fetaures-cards-container {
-      flex-direction: column;
-    }
-    .logo {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .logo-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .menu-button-container {
+      display: block;
+    }    
+    .dark-mode-toggle {
+      display: none;
     }
   }

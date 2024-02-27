@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //theme change
 
 const toggleButton = document.getElementById('dark-mode-toggle');
+const toggleButtonMobile = document.getElementById('dark-mode-toggle-mobile');
 const lightModeStylesheet = document.getElementById('light-mode-stylesheet');
 const darkModeStylesheet = document.getElementById('dark-mode-stylesheet');
 
@@ -70,6 +71,7 @@ if (storedTheme === 'dark') {
   lightModeStylesheet.disabled = true;
   darkModeStylesheet.disabled = false;
   toggleButton.checked = true
+  toggleButtonMobile.checked = true
 }
 
 toggleButton.addEventListener('click', () => {
@@ -80,6 +82,18 @@ toggleButton.addEventListener('click', () => {
   // Store the current theme preference in localStorage
   const currentTheme = lightModeStylesheet.disabled ? 'dark' : 'light';
   localStorage.setItem('theme', currentTheme);
+  toggleButtonMobile.checked ^=1;
+});
+
+toggleButtonMobile.addEventListener('click', () => {
+  // Toggle the theme
+  lightModeStylesheet.disabled = !lightModeStylesheet.disabled;
+  darkModeStylesheet.disabled = !darkModeStylesheet.disabled;
+
+  // Store the current theme preference in localStorage
+  const currentTheme = lightModeStylesheet.disabled ? 'dark' : 'light';
+  localStorage.setItem('theme', currentTheme);
+  toggleButton.checked ^=1;
 });
 
 // page navigation
@@ -136,10 +150,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+function toggleOverlay(x) {
+  x.classList.toggle("change");
+  var mobileNav = document.getElementById("mobile-nav");
+  if (mobileNav.style.width === "100%") {
+    mobileNav.style.width = "0%";
+  } else {
+    mobileNav.style.width = "100%";
+  }
 }
