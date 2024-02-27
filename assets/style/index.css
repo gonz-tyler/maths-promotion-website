@@ -539,6 +539,9 @@
   .features .fetaures-cards-container {
     flex-direction: column;
   }
+  .footer .home-nav {
+    flex-direction: column;
+  }
   .logo {
     display: flex;
     justify-content: center;

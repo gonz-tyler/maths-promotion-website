@@ -446,3 +446,36 @@ img {
       display: none;
     }
   }
+
+  @media screen and (max-width: 768px) {
+  
+    .features .fetaures-cards-container {
+      flex-direction: column;
+    }
+    .footer .home-nav {
+      flex-direction: column;
+    }
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .logo-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .home-mobile-menu1 {
+      display: none;
+    }
+    .home-burger-menu {
+      display: none;
+    }
+    .menu-button-container {
+      display: block;
+    }
+  
+    .desktop-menu {
+        display: none;
+    }
+  }
