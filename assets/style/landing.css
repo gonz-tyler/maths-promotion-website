@@ -478,4 +478,7 @@ img {
     .desktop-menu {
         display: none;
     }
+    table {
+      font-size: large;
+    }
   }
